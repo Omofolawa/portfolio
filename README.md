@@ -1,5 +1,4 @@
-portfolio
-Description: This repository hosts the source code for Omofolawa A-Adeniran's portfolio website. As a skilled Data Engineer and Certified Scrum Master, this showcases my expertise, experience, and projects through this interactive and visually appealing website. Explore Omofolawa's journey, skills, projects, and contact information to learn more about my professional background and contributions to the tech industry.
+This repository hosts the source code for Omofolawa A-Adeniran's portfolio website. As a skilled Data Engineer and Certified Scrum Master, this showcases my expertise, experience, and projects through this interactive and visually appealing website. Explore Omofolawa's journey, skills, projects, and contact information to learn more about my professional background and contributions to the tech industry.
 
 Key Features:
 
