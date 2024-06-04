@@ -8,15 +8,8 @@ Projects section featuring end-to-end data engineering projects and other notabl
 Responsive design for optimal viewing across various devices.
 Interactive navigation for seamless exploration of content.
 Contact information for potential collaboration opportunities and inquiries.
-Technologies Used:
 
-HTML5
-CSS3
-Bootstrap
-JavaScript
-jQuery
-GitHub Pages
+Technologies Used: HTML5, CSS3, Bootstrap, JavaScript, jQuery, GitHub Pages
 
-Contributions Welcome: Contributions to improve design, add new features, or fix issues are welcome. Feel free to fork this repository, make changes for your personal use.
-License: This project is licensed under the MIT License, allowing for free and open use, modification, and distribution.
+All rights reserved.
 
