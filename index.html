@@ -11,25 +11,25 @@
         .jumbotron {
             background-color: #064B78; /* Calm and vibrant background color */
             color: #ffffff; /* White text color */
-            padding: 4rem 2rem; /* Adjust padding for better spacing */
+            padding: 6rem 1rem; /* Adjust padding for better spacing */
             margin-bottom: 0; /* Remove default margin */
+            border-radius: 10px
         }
 
-	/* Extend the length of the navbar */
-	.navbar {
-    	    width: 100%; /* Ensure the navbar spans the full width of the viewport */
-            background-color: #000000; /* Dark background for contrast */
+        .navbar {
+            background-color: #000000; /* Slightly lighter navbar background color */
+	    padding: 1.5rem 1rem;
+	    margin-bottom: 40px;
+	    border-radius: 10px;
         }
 
-	/* Change font color and hover color */
-	.navbar .nav-link {
-    	   color: #f8f9fa; /* Light color for text */
-    	   font-size: 16px; /* Adjust font size if needed */
-    	   transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+        .navbar-brand,
+	.navbar-nav .nav-link {
+    	    color: #ecf0f1 !important; /* Lighter navbar link color */
 	}
 
-	.navbar .nav-link:hover {
-    	   color: #E6C800; /* Change to a nicer hover color, e.g., teal */
+	.navbar-nav .nav-link:hover {
+    	    color: orange !important; /* Orange hover color */
 	}
 
 	/* Customize the brand link */
@@ -37,10 +37,6 @@
     	   color: #f8f9fa; /* Light color for brand text */
            font-weight: bold; /* Make the brand text bold */
            transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
-	}
-
-	.navbar-brand:hover {
-           color: #17a2b8; /* Change to a nicer hover color, e.g., teal */
 	}
 
         /* Custom CSS for Footer */
@@ -68,49 +64,65 @@
             margin: 0 5px; /* Add some spacing between icons */
         }
 
-      .skills-container {
+	.skills-container {
     	    display: flex;
-            flex-wrap: wrap;
+    	    flex-wrap: wrap;
             gap: 20px;
 	}
 
-      .skills-container > * {
-    	   flex: 1 1 calc(33.33% - 20px); /* Flex-grow, flex-shrink, flex-basis */
-           max-width: calc(33.33% - 20px); /* Set maximum width for flexibility */
-           position: relative; /* Ensure position context for absolute positioning */
-           cursor: pointer; /* Change cursor to pointer on hover for better UX */
-           overflow: hidden; /* Hide overflowing content */
-           transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-        }
+	.skills-container > * {
+       	    flex: 1 1 calc(33.33% - 20px); /* Default for larger screens */
+            max-width: calc(33.33% - 20px);
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+	}
 
-      .skills-container > *:hover {
-           transform: scale(1.05); /* Scale up the item slightly on hover */
-       }
+	.skills-container > *:hover {
+          transform: scale(1.05);
+	}
 
-      .skills-container > *::before {
-           content: ""; /* Create pseudo-element for outline effect */
-           position: absolute;
-           top: 0;
-    	   left: 0;
-    	   right: 0;
-    	   bottom: 0;
-    	   border: 2px solid transparent; /* Initial transparent border */
-           transition: border-color 0.3s ease-in-out; /* Smooth transition for border color change */
-       }
+	.skills-container > *::before {
+  	  content: "";
+	  position: absolute;
+   	  top: 0;
+    	  left: 0;
+     	  right: 0;
+  	  bottom: 0;
+  	  border: 2px solid transparent;
+  	  transition: border-color 0.3s ease-in-out;
+	}
 
-      .skills-container > *:hover::before {
-           border-color: #007bff; /* Change border color on hover */
-       }
+	.skills-container > *:hover::before {
+    	   border-color: #007bff;
+	}
 
-        .skills-container .tile {
-            background-color: #064B78; /* Green background color */
-            color: #ffffff; /* White text color */
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+	.skills-container .tile {
+      	   background-color: #064B78;
+    	   color: #ffffff;
+    	   padding: 20px;
+    	   text-align: center;
+	   border-radius: 8px;
+    	   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);		
+	}
 
+	/* Responsive adjustments */
+	@media (max-width: 1200px) {
+    	.skills-container > * {
+           flex: 1 1 calc(50% - 20px); /* Adjust for medium screens */
+           max-width: calc(50% - 20px);	
+    		}
+	}	
+
+	@media (max-width: 768px) {
+    	.skills-container > * {
+           flex: 1 1 100%; /* Adjust for small screens */
+           max-width: 100%;
+    		}
+	}
+
+      
 	p {
     	   text-align: justify;
            font-size: 16px; /* Optional: Adjust font size */
@@ -120,21 +132,24 @@
 
 	/* Body background gradient */
         body {
-            background: linear-gradient(rgba(6, 75, 130, 0.5), rgba(65, 50, 50, 0.5)); /* Blend of jumbotron color and pitch black */
+            background: linear-gradient(rgba(6, 75, 130, 0.5), rgba(100, 50, 100, 0.5)); /* Blend of jumbotron color and pitch black */
             font-family: Arial, sans-serif; /* Optional: Set a font family */
             /* color: #fff; /* Default text color */
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
+	    margin-top: 30px
         }
     </style>
-</head>
-<body>
 
+    </head>
+
+<body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Omofolawa A-Adeniran</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+		aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -164,7 +179,7 @@
         <h2 class="display-6">Omofolawa Alimi-Adeniran</h2>
         <h6 class="lead">Data Engineer | SQL Developer | Certified Scrum Master</h6>
     </div>
-    <br><br>
+    <br>
 
     <!-- Main Content -->
     <div class="container" id="about">
@@ -257,7 +272,7 @@
             <div class="skills-container">
                 <div class="tile">
                     <h5>Database and Data Modeling</h5>
-                    <h6>MS SQL Server 2019 | MySQL Server | SSIS | Draw.io | Visio.</h6>
+                    <h6>MS SQL Server 2019 | MySQL Server | SSIS | Draw.io | Visio</h6>
                 </div>
                 <div class="tile">
                     <h5>Azure Cloud Services</h5>
@@ -343,8 +358,8 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
